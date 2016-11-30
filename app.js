@@ -3,7 +3,7 @@ var request = require('request');
 
 var app = express();
 
-var urls = ['http://www.laughfactory.com/jokes/joke-of-the-day']
+var urls = ['https://mathlessons.herokuapp.com/']
 
 setInterval(function() {
 	
@@ -14,7 +14,7 @@ setInterval(function() {
 			}
 		});
 	});
-}, 15 * 1000 * 60) // 15 mins -> 15 * 1000 * 60 = 900000
+}, 20 * 1000 * 60) // 20 mins
 
 app.listen(process.env.PORT || 3001);
 
