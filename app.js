@@ -16,5 +16,5 @@ setInterval(function() {
 	});
 }, 15 * 1000 * 60) // 15 mins -> 15 * 1000 * 60 = 900000
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 
