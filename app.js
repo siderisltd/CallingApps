@@ -5,6 +5,10 @@ var app = express();
 
 var urls = ['https://mathlessons.herokuapp.com/']
 
+app.get('/', function(req, res) {
+    res.status(200).send({ pingSuccess: "true" });
+});
+
 setInterval(function() {
 	
 	urls.map(function(url){
