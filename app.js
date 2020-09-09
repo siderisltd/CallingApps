@@ -3,10 +3,10 @@ var request = require('request');
 
 var app = express();
 
-var urls = ['https://mathlessons.herokuapp.com/']
+var urls = ['https://mathlessons.herokuapp.com/', 'https://qphotography.eu/']
 
 app.get('/', function(req, res) {
-    res.status(200).send({ pingSuccess: "true" });
+    res.status(200).send({ alive: "true" });
 });
 
 setInterval(function() {
@@ -18,7 +18,7 @@ setInterval(function() {
 			}
 		});
 	});
-}, 20 * 1000 * 60) // 20 mins
+}, 15 * 1000 * 60) // 15 mins
 
 app.listen(process.env.PORT || 3001);
 
